@@ -1,0 +1,24 @@
+:root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; }
+body { margin: 0; background: #0b0f14; color: #e6edf3; }
+.app { padding: 16px; max-width: 1400px; margin: auto; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+h1 { font-size: 1.4rem; }
+.grid { display: grid; gap: 12px; }
+.cards { grid-template-columns: repeat(4, minmax(0,1fr)); margin-bottom: 12px; }
+.main { grid-template-columns: 2fr 1fr; }
+.card { background: #111821; border: 1px solid #1f2a36; border-radius: 12px; padding: 12px; }
+.stat-card { min-height: 72px; }
+.muted { color: #8b949e; font-size: .85rem; }
+.green { color: #3fb950; }
+.red { color: #f85149; }
+.chart { width: 100%; }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; }
+button, select, input { background: #1c2531; color: #e6edf3; border: 1px solid #2d3a49; border-radius: 8px; padding: 8px; }
+.buy { background: #1a4428; }
+.sell { background: #4a1d1d; }
+.side-panel { display: flex; flex-direction: column; gap: 8px; }
+.paper-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: .9rem; }
+@media (max-width: 1024px) {
+  .cards { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .main { grid-template-columns: 1fr; }
+}

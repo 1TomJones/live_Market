@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: kent-invest-crypto-market-lab
+    env: node
+    plan: free
+    buildCommand: npm install && npm run install:all && npm run build
+    startCommand: NODE_ENV=production npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DEFAULT_SYMBOL
+        value: BTCUSDT
+      - key: DEFAULT_INTERVAL
+        value: 1m
+      - key: DB_PATH
+        value: /opt/render/project/src/server/data/market_lab.db
