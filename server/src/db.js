@@ -79,3 +79,6 @@ export function initDb() {
     CREATE INDEX IF NOT EXISTS idx_paper_trades_session ON paper_trades(session_id, timestamp);
   `);
 }
+
+// Ensure schema exists before any module prepares SQL statements.
+initDb();

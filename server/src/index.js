@@ -6,12 +6,10 @@ import http from 'http';
 import cors from 'cors';
 import { Server } from 'socket.io';
 import { AUTO_SYNC_MS, BOOK_TICKER_POLL_MS, DEFAULT_INTERVAL, DEFAULT_SYMBOL, NODE_ENV, PORT } from './config.js';
-import { initDb } from './db.js';
 import apiRouter from './routes/api.js';
 import { syncBookTicker, syncKlines, syncTrades } from './services/syncService.js';
 import { getOverview } from './services/analyticsService.js';
 
-initDb();
 
 const app = express();
 const server = http.createServer(app);
